@@ -10,7 +10,26 @@ import newrelese from '../assests/newRelease.png'
 import rightArrow from '../assests/rightArrow.png'
 import leftArrow from '../assests/leftArrow.png'
 import movoesShows from '../assests/movoesShows.png'
+import { useRef } from 'react'
 const MoviesShowsPage = () => {
+  const MoviegeneresRef=useRef(null);
+  const top10MovieRef=useRef(null);generes
+  const scrollMoviegeneres=(direction)=>{
+        if (!MoviegeneresRef.current) return;
+    const scrollAmount = 300;
+    MoviegeneresRef.current.scrollBy({
+      left: direction === 'left' ? -scrollAmount : scrollAmount,
+      behavior: 'smooth',
+    });
+    }
+    const scrolltop10Moviegeneres=(direction)=>{
+        if (!top10MovieRef.current) return;
+    const scrollAmount = 300;
+    top10MovieRef.current.scrollBy({
+      left: direction === 'left' ? -scrollAmount : scrollAmount,
+      behavior: 'smooth',
+    });
+    }
   return (
     <div>
       <Navbar/>
@@ -28,12 +47,12 @@ const MoviesShowsPage = () => {
         <div className='flex flex-col md:flex-row items-center justify-between mb-16'>
            <h1 className='font-bold text-[38px] text-center md:text-start'>Our Genres</h1>
            <div className='flex items-center gap-4 bg-black px-2 py-2'>
-                      <img src={leftArrow} className='bg-gray-700 w-[32px] h-[32px] rounded-[5px] px-[2px] py-[2px]'></img>
+                      <img src={leftArrow} onClick={()=>scrollMoviegeneres('left')} className='bg-gray-700 w-[32px] h-[32px] rounded-[5px] px-[2px] py-[2px]'></img>
                       <p className='text-[32px] font-extraBold'><span className='text-red-700'>-</span>---</p>
-                       <img src={rightArrow} className='bg-gray-700 w-[32px] h-[32px] rounded-[5px] px-[2px] py-[2px]'></img>
+                       <img src={rightArrow} onClick={()=>scrollMoviegeneres('right')} className='bg-gray-700 w-[32px] h-[32px] rounded-[5px] px-[2px] py-[2px]'></img>
                     </div>
         </div>
-      <div className='flex space-x-4 overflow-x-auto scroll-smooth scrollbar-hide'>
+      <div ref={MoviegeneresRef} className='flex space-x-4 overflow-x-auto scroll-smooth scrollbar-hide'>
         {
           [1,2,3,4,5,6,7,8].map((item,idx)=>( 
            
@@ -57,12 +76,12 @@ const MoviesShowsPage = () => {
         <div className='flex flex-col md:flex-row items-center justify-between mb-16'>
            <h1 className='font-bold text-[38px] text-center md:text-start'>Popular Top 10 Genres</h1>
           <div className='flex items-center gap-4 bg-black px-2 py-2'>
-                     <img src={leftArrow} className='bg-gray-700 w-[32px] h-[32px] rounded-[5px] px-[2px] py-[2px]'></img>
+                     <img src={leftArrow} onClick={()=>scrolltop10Moviegeneres('left')} className='bg-gray-700 w-[32px] h-[32px] rounded-[5px] px-[2px] py-[2px]'></img>
                      <p className='text-[32px] font-extraBold'><span className='text-red-700'>-</span>---</p>
-                      <img src={rightArrow} className='bg-gray-700 w-[32px] h-[32px] rounded-[5px] px-[2px] py-[2px]'></img>
+                      <img src={rightArrow} onClick={()=>scrolltop10Moviegeneres('right')} className='bg-gray-700 w-[32px] h-[32px] rounded-[5px] px-[2px] py-[2px]'></img>
                    </div>
         </div>
-      <div className='flex space-x-4 overflow-x-auto scroll-smooth scrollbar-hide'>
+      <div ref={top10MovieRef}  className='flex space-x-4 overflow-x-auto scroll-smooth scrollbar-hide'>
         {
           [1,2,3,4,5,6,7,8].map((item,idx)=>( 
            

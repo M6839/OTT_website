@@ -8,7 +8,9 @@ import Plans from '../components/Plans'
 import generes from '../assests/generes.png'
 import rightArrow from '../assests/rightArrow.png'
 import leftArrow from '../assests/leftArrow.png'
+import { useRef } from 'react'
 const Home = () => {
+      const scrollRef=useRef(null);
   const devices=[
     {
       icon:'',
@@ -41,8 +43,16 @@ const Home = () => {
       desc:'StreamVibe is optimized for both Android and iOS smartphones. Download our app from the Google Play Store or the Apple App Store'   
      }
   ]
+  const scroll=(direction)=>{
+        if (!scrollRef.current) return;
+    const scrollAmount = 300;
+    scrollRef.current.scrollBy({
+      left: direction === 'left' ? -scrollAmount : scrollAmount,
+      behavior: 'smooth',
+    });
+    }
   return (
-    <div className=''>
+    <div className='flex flex-col'>
       <Navbar/>
       <Hero/>
        <section className='md:mx-[120px]'>
@@ -52,12 +62,12 @@ const Home = () => {
            <p className='text-[18px] text-gray-600 text-center md:text-start'>Whether you're looking for a comedy to make you laugh, a drama to make you think, or a documentary to learn something new</p>
           </div>
           <div className='flex items-center gap-4 bg-black px-2 py-2'>
-            <img src={leftArrow} className='bg-gray-700 w-[32px] h-[32px] rounded-[5px] px-[2px] py-[2px]'></img>
+            <img src={leftArrow} onClick={()=>scroll('left')} className='bg-gray-700 w-[32px] h-[32px] rounded-[5px] px-[2px] py-[2px]'></img>
             <p className='text-[32px] font-extraBold'><span className='text-red-700'>-</span>---</p>
-             <img src={rightArrow} className='bg-gray-700 w-[32px] h-[32px] rounded-[5px] px-[2px] py-[2px]'></img>
+             <img src={rightArrow} onClick={()=>scroll('right')} className='bg-gray-700 w-[32px] h-[32px] rounded-[5px] px-[2px] py-[2px]'></img>
           </div>
         </div>
-      <div className='flex space-x-4 overflow-x-auto scroll-smooth scrollbar-hide'>
+      <div ref={scrollRef} className='flex space-x-4 overflow-x-auto scroll-smooth scrollbar-hide'>
         {
           [1,2,3,4,5,6,7,8].map((item,idx)=>( 
            

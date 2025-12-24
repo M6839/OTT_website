@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <div className='mx-4 md:mx-[120px] py-[20px] '>
     <div className='grid grid-cols-2 md:flex md:justify-between py-12'>
-        <section className='flex flex-col gap-6'>
+        <section className='flex flex-col gap-2'>
         <h1>Home</h1>
         <div className=''>
         {
@@ -18,7 +18,7 @@ const Footer = () => {
         }
     </div>
     </section>
-    <section className='flex flex-col gap-6'>
+    <section className='flex flex-col gap-2'>
         <h1>Movies</h1>
         <div className=''>
         {
@@ -29,7 +29,7 @@ const Footer = () => {
 
     </div>
     </section>
-    <section className='flex flex-col gap-6'>
+    <section className='flex flex-col gap-2'>
         <h1>Shows</h1>
         <div className=''>
         {
@@ -40,7 +40,7 @@ const Footer = () => {
 
     </div>
     </section>
-    <section className='flex flex-col gap-6'>
+    <section className='flex flex-col gap-2'>
         <h1>Support</h1>
         <div className=''>
         {
@@ -51,7 +51,7 @@ const Footer = () => {
 
     </div>
     </section>
-    <section className='flex flex-col gap-6'>
+    <section className='flex flex-col gap-2'>
         <h1>Subscription</h1>
         <div className=''>
         {
@@ -62,7 +62,7 @@ const Footer = () => {
 
     </div>
     </section>
-    <section className='flex flex-col gap-4'>
+    <section className='flex flex-col gap-2'>
         <h1>Contact with Us</h1>
         <div className=''>
         {
