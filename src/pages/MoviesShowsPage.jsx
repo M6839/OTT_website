@@ -38,11 +38,11 @@ const MoviesShowsPage = () => {
               <div className='absolute md:top-[300px] flex flex-col items-center gap-4 md:gap-12 '>
               <h1 className='font-bold text-[32px] md:text-[58px] text-center'>The Best Streaming Experience</h1>
               <p className='text-[18px] text-gray-600 text-center'>StreamVibe is the best streaming experience for watching your favorite movies and shows on demand, anytime, anywhere. With StreamVibe, you can enjoy a wide variety of content, including the latest blockbusters, classic movies, popular TV shows, and more. You can also create your own watchlists, so you can easily find the content you want to watch.</p>
-             <button className='bg-red-600 py-[18px] px-[24px] rounded-[8px]'>Start watching now</button>
+             <button className='bg-[#E50000] text-[18px] font-semibold text-[#FFFFFF] py-[18px] px-[24px] rounded-[8px]'>Start watching now</button>
               </div>
           </div>
      <div className='relative border border-gray-800 rounded-[10px] p-8 md:mx-[100px]'>
-        <button className='absolute  top-[-20px] bg-red-600 py-[10px] px-[18px] rounded-[8px]'>Movies</button>
+        <button className='absolute bg-[#E50000] text-[18px] font-semibold text-[#FFFFFF] top-[-20px] bg-red-600 py-[10px] px-[18px] rounded-[8px]'>Movies</button>
         <section className=''>
         <div className='flex flex-col md:flex-row items-center justify-between mb-16'>
            <h1 className='font-bold text-[38px] text-center md:text-start'>Our Genres</h1>
@@ -90,7 +90,7 @@ const MoviesShowsPage = () => {
                             <img src={top10} className='h-[240px]'></img>
                             <div className='flex items-center justify-between'>
                               <div className='space-y-1'>
-                                <p className='bg-red-700 rounded-[8px] px-2 py-1'>Top 10 in</p>
+                                <p className='bg-[#E50000] text-[#FFFFFF] rounded-[8px] px-2 py-1'>Top 10 in</p>
                               <p>Action</p></div>
                               <img src={rightArrow} className=' w-[32px] h-[32px] '></img>
                               </div>
@@ -191,7 +191,7 @@ const MoviesShowsPage = () => {
       </section>
      </div>
           <div className='relative border border-gray-800 rounded-[10px] p-8 md:mx-[100px] mt-12'>
-        <button className='absolute top-[-20px] bg-red-600 py-[10px] px-[18px] rounded-[8px]'>Shows</button>
+        <button className='absolute bg-[#E50000] text-[18px] font-semibold text-[#FFFFFF] top-[-20px] bg-red-600 py-[10px] px-[18px] rounded-[8px]'>Shows</button>
         <section className=''>
         <div className='flex flex-col md:flex-row items-center justify-between mb-16'>
            <h1 className='font-bold text-[38px] text-center md:text-start'>Our Genres</h1>
@@ -238,7 +238,7 @@ const MoviesShowsPage = () => {
                   <div className='w-[150px] md:w-[250px] px-4 pt-4 pb-6'>
                             <img src={generes} className='h-[240px]'></img>
                             <div className='flex items-center justify-between mt-2'>
-                               <p className='bg-red-700 rounded-[8px] px-2 py-1'>Top 10 in</p>
+                               <p className='bg-[#E50000] text-[#FFFFFF] rounded-[8px] px-2 py-1'>Top 10 in</p>
                               <p>Action</p></div>
                               <img src={rightArrow} className=' w-[32px] h-[32px] '></img>
                             </div>

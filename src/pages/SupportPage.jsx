@@ -44,7 +44,7 @@ const SupportPage = () => {
               <input type='checkbox' className='bg-[#1E1E1E] rounded-[10px] mr-2'></input>
               I agree with Terms of Use and Privacy Policy
             </label>
-             <button className='bg-red-600 py-[10px] px-[10px] w-full md:w-[140px] rounded-[8px]'>Start a Free Trial</button>
+             <button className='bg-[#E50000]  font-semibold text-[#FFFFFF] py-[8px] px-[10px] w-full md:w-[140px] rounded-[8px]'>Start a Free Trial</button>
           </div>
 
         </div>

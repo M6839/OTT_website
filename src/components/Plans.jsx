@@ -31,7 +31,7 @@ const Plans = () => {
               <h1 className='font-semibold text-[40px]'>{item.price}<sup className='text-[18px] teat-gray-600'> month</sup></h1>
               <div className='flex gap-4'>
               <button className='bg-black py-2 px-4 rounded-[10px]'>Start Free Trial</button>
-              <button className='bg-red-600 py-2 px-4 rounded-[10px]'>Choose Plan</button>
+              <button className='bg-[#E50000] text-[18px] font-semibold text-[#FFFFFF] py-2 px-4 rounded-[10px]'>Choose Plan</button>
               </div>
             </div>
 

@@ -9,36 +9,42 @@ import generes from '../assests/generes.png'
 import rightArrow from '../assests/rightArrow.png'
 import leftArrow from '../assests/leftArrow.png'
 import { useRef } from 'react'
+import mobile from'../assests/mobile.png'
+import tablet from'../assests/tablet.png'
+import smarttv from'../assests/smattv.png'
+import laptop from'../assests/laptop.png'
+import gamingconsoles from'../assests/gaming.png'
+import vrheadsets from'../assests/vrhead.png'
 const Home = () => {
       const scrollRef=useRef(null);
   const devices=[
     {
-      icon:'',
+      icon:mobile,
       head:'Smartphones',
       desc:'StreamVibe is optimized for both Android and iOS smartphones. Download our app from the Google Play Store or the Apple App Store'   
      },
      {
-      icon:'',
+      icon:tablet,
       head:'Tablet',
       desc:'StreamVibe is optimized for both Android and iOS smartphones. Download our app from the Google Play Store or the Apple App Store'   
      },
      {
-      icon:'',
+      icon:smarttv,
       head:'Smart TV',
       desc:'StreamVibe is optimized for both Android and iOS smartphones. Download our app from the Google Play Store or the Apple App Store'   
      },
      {
-      icon:'',
+      icon:laptop,
       head:'Laptaps',
       desc:'StreamVibe is optimized for both Android and iOS smartphones. Download our app from the Google Play Store or the Apple App Store'   
      },
      {
-      icon:'',
+      icon:gamingconsoles,
       head:'Gaming concens',
       desc:'StreamVibe is optimized for both Android and iOS smartphones. Download our app from the Google Play Store or the Apple App Store'   
      },
      {
-      icon:'',
+      icon:vrheadsets,
       head:'VR HeadSets',
       desc:'StreamVibe is optimized for both Android and iOS smartphones. Download our app from the Google Play Store or the Apple App Store'   
      }
@@ -55,7 +61,7 @@ const Home = () => {
     <div className='flex flex-col'>
       <Navbar/>
       <Hero/>
-       <section className='md:mx-[120px]'>
+       <section className='md:mx-[120px] mt-24 md:mt-0'>
         <div className='flex flex-col md:flex-row items-center justify-between mb-16'>
           <div className=''>
            <h1 className='font-bold text-[38px] text-center md:text-start'>Explore our wide variety of categories</h1>
@@ -83,7 +89,6 @@ const Home = () => {
             </div>
     
           ))
-
         }
       </div>
       </section>
@@ -93,8 +98,11 @@ const Home = () => {
       <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mt-16'>
         {
           devices.map((item,idx)=>(
-            <div className='border-[0.5px] border-gray-700 rounded-[10px] bg-gradient-to-bl  from-red-600 via-black to-[#0F0F0F] px-[20px] py-[20px]'>
-              <div><h1 className='font-semibold text-[24px]'>{item.head}</h1></div>
+            <div className='border-[0.5px] border-gray-700 rounded-[10px] bg-[linear-gradient(221.52deg,rgba(229,0,0,0.5)_-208.03%,rgba(229,0,0,0)_41.32%,#0F0F0F)] px-[20px] py-[20px]'>
+              <div className='flex items-center gap-4'>
+                <img src={item.icon} className='w-[72px] h-[72px] border-[0.5px] border-gray-500 bg-gray-700 p-[16px] rounded-[12px]'></img>
+                <h1 className='font-semibold text-[24px]'>{item.head}</h1>
+                </div>
               <p className='text-[18px] text-gray-400'>{item.desc}</p>
             </div>
 
