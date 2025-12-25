@@ -111,8 +111,8 @@ const Home = () => {
         }
       </div>
       </section>
+       <FAQs/>
       <Plans/>
-      <FAQs/>
       <FreeTrial/>
       <Footer/>
     </div>
